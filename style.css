@@ -1,0 +1,103 @@
+/* Magic Calculator style sheet */
+/* Global Reset */
+    * {
+      box-sizing: border-box; /* Includes padding in size calculations */
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Centering Wrapper */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f2f5;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Calculator Main Container */
+    .calculator {
+      display: flex;
+      flex-direction: column; /* Stacks display and buttons vertically */
+      width: 320px;
+      background-color: #202124;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      gap: 15px; /* Creates spacing between display and keypad */
+    }
+
+    /* Display Screen */
+    .display {
+      background-color: #333;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 2rem;
+      text-align: right; /* Aligns characters to the right edge */
+      padding: 15px;
+    }
+
+    /* Keypad Grid Wrapper using Flexbox */
+    .keypad {
+      display: flex;
+      flex-wrap: wrap; /* Allows row items to wrap onto the next line */
+      gap: 10px; /* Space between buttons */
+    }
+
+    /* Standard Button Styling */
+    .key {
+      /* Calculates 4 columns minus the gaps */
+      flex: 1 1 calc(25% - 8px); 
+      height: 60px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #3c4043;
+      color: #ffffff;
+      transition: background 0.1s ease;
+    }
+
+    .key:hover {
+      background-color: #5f6368;
+    }
+
+    .gray {
+        background-color: gray;
+    }
+
+    /* Modifier Classes for Different Button Types */
+    .operator {
+      background-color: #e25a0a;
+      color: #202124;
+    }
+    
+    .operator:hover {
+      background-color: #e8eaed;
+    }
+
+    .clear {
+      background-color: #da4453;
+      color: white;
+    }
+
+    .clear:hover {
+      background-color: #c9303c;
+    }
+
+    .equal {
+      background-color: #1a73e8;
+      color: white;
+      /* Spans across two column spaces */
+      flex: 2 0 calc(50% - 8px); 
+    }
+
+    .equal:hover {
+      background-color: #1557b0;
+    }

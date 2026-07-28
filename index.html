@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Peggy's Magic Calculator"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+        <input type="text" class="display" id="result" readonly value="0">
+        <div class="keypad">
+            <button class="key gray" onClick="clearOne()">X</button>
+            <button class="key gray" onClick="clearAll()">CA</button>
+            <button class="key gray" onClick="appendValue('%')">%</button>
+            <button class="key operator" onClick="appendValue('/')">/</button>
+
+            <button class="key" onClick="appendValue('7')">7</button>
+            <button class="key" onClick="appendValue('8')">8</button>
+            <button class="key" onClick="appendValue('9')">9</button>
+            <button class="key operator" onClick="appendValue('*')">*</button>
+
+            <button class="key" onClick="appendValue('4')">4</button>
+            <button class="key" onClick="appendValue('5')">5</button>
+            <button class="key" onClick="appendValue('6')">6</button>
+            <button class="key operator" onClick="appendValue('-')">-</button>
+
+            <button class="key" onClick="appendValue('1')">1</button>
+            <button class="key" onClick="appendValue('2')">2</button>
+            <button class="key" onClick="appendValue('3')">3</button>
+            <button class="key operator" onClick="appendValue('+')">+</button>
+
+            <button class="key" onClick="toggleSign()">+/-</button>
+            <button class="key" onClick="appendValue('0')">0</button>
+            <button class="key" onClick="appendValue('.')">.</button>
+            <button class="key operator" onClick="operate()">=</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+doNothing
+
+</html>
